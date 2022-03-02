@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Koala.DAL.Migrations
 {
     [DbContext(typeof(SqlContext))]
-    [Migration("20220302193838_start")]
-    partial class start
+    [Migration("20220302204828_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
