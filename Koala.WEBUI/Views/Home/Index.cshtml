@@ -8,21 +8,17 @@
 					<div class="inner-content">
 						<h4>Koala</h4>
 						<h4>Oyun Evi</h4>
-						<h6>THE BEST EXPERIENCE</h6>
-						<div class="main-white-button scroll-to-section">
-							<a href="#reservation">Make A Reservation</a>
-						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-8">
-				<div class="">
-					<div class="main-banner header-text">
+			<div class="col-lg-8" >
+                    <div class="main-banner header-text">
+                        <div class="Modern-Slider">
 						@foreach (Slider s in Model.Slider)
 						{
 							<div class="item">
 								<div class="img-fill">
-									<img src="@s.Picture" alt="">
+									<img src="@s.Picture"alt="">
 								</div>
 							</div>
 						}
@@ -39,8 +35,7 @@
 		<div class="row">
 			<div class="col-lg-4">
 				<div class="section-heading">
-					<h6>Our Menu</h6>
-					<h2>Our selection of cakes with quality taste</h2>
+					<h2>Etkinliklerimizden Görüntüler</h2>
 				</div>
 			</div>
 		</div>
@@ -51,7 +46,7 @@
 				@foreach (GalleryPicture g in Model.GalleryPicture)
 				{
 				<div class="item">
-					<div class='card card2'>
+					<div>
 						<img src="@g.Path" >	
 					</div>
 				</div>
@@ -68,8 +63,8 @@
 		<div class="row">
 			<div class="col-lg-4 offset-lg-4 text-center">
 				<div class="section-heading">
-					<h6>Our Chefs</h6>
-					<h2>We offer the best ingredients for you</h2>
+					<h6></h6>
+					<h2>Çalışan Listemiz</h2>
 				</div>
 			</div>
 		</div>
