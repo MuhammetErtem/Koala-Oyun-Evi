@@ -16,9 +16,10 @@ namespace Koala.WEBUI.Controllers
             IndexVm indexVM = new IndexVm
             {
                 Slider = db.Slider,
-                
+                GalleryPicture = db.GalleryPicture.OrderByDescending(o => o.ID).Take(5),
+                People = db.People.OrderByDescending(o => o.ID).Take(3),
 
-            };
+            };   
             return View(indexVM);
         }
     }

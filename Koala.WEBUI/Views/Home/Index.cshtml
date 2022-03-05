@@ -4,7 +4,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-4">
-				<div class="left-content">
+				<div class="left-content" style="background-image: url(/images/top-left-bg-1.jpg)">
 					<div class="inner-content">
 						<h4>Koala</h4>
 						<h4>Oyun Evi</h4>
@@ -16,8 +16,8 @@
 				</div>
 			</div>
 			<div class="col-lg-8">
-				<div class="main-banner header-text">
-					<div class="Modern-Slider">
+				<div class="">
+					<div class="main-banner header-text">
 						@foreach (Slider s in Model.Slider)
 						{
 							<div class="item">
@@ -48,78 +48,15 @@
 	<div class="menu-item-carousel">
 		<div class="col-lg-12">
 			<div class="owl-menu-item owl-carousel">
-				<div class="item">
-					<div class='card card1'>
-						<div class="price"><h6>$14</h6></div>
-						<div class='info'>
-							<h1 class='title'>Chocolate Cake</h1>
-							<p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
-							<div class="main-text-button">
-								<div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-							</div>
-						</div>
-					</div>
-				</div>
+				@foreach (GalleryPicture g in Model.GalleryPicture)
+				{
 				<div class="item">
 					<div class='card card2'>
-						<div class="price"><h6>$22</h6></div>
-						<div class='info'>
-							<h1 class='title'>Klassy Pancake</h1>
-							<p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
-							<div class="main-text-button">
-								<div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-							</div>
-						</div>
+						<img src="@g.Path" >	
 					</div>
 				</div>
-				<div class="item">
-					<div class='card card3'>
-						<div class="price"><h6>$18</h6></div>
-						<div class='info'>
-							<h1 class='title'>Tall Klassy Bread</h1>
-							<p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
-							<div class="main-text-button">
-								<div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class='card card4'>
-						<div class="price"><h6>$10</h6></div>
-						<div class='info'>
-							<h1 class='title'>Blueberry CheeseCake</h1>
-							<p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
-							<div class="main-text-button">
-								<div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class='card card5'>
-						<div class="price"><h6>$8.50</h6></div>
-						<div class='info'>
-							<h1 class='title'>Klassy Cup Cake</h1>
-							<p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
-							<div class="main-text-button">
-								<div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class='card card3'>
-						<div class="price"><h6>$7.25</h6></div>
-						<div class='info'>
-							<h1 class='title'>Klassic Cake</h1>
-							<p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedii do eiusmod teme.</p>
-							<div class="main-text-button">
-								<div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-							</div>
-						</div>
-					</div>
-				</div>
+				}
+			
 			</div>
 		</div>
 	</div>
@@ -137,57 +74,22 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-4">
+			@foreach (People p in Model.People)
+			{
+				<div class="col-lg-4">
 				<div class="chef-item">
 					<div class="thumb">
 						<div class="overlay"></div>
-						<ul class="social-icons">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-						</ul>
-						<img src="/images/chefs-01.jpg" alt="Chef #1">
+		
+						<img src="@p.Path" alt="@p.Title">
 					</div>
 					<div class="down-content">
-						<h4>Randy Walker</h4>
-						<span>Pastry Chef</span>
+						<h4>@p.Name</h4>
+						<span>@p.Title</span>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-4">
-				<div class="chef-item">
-					<div class="thumb">
-						<div class="overlay"></div>
-						<ul class="social-icons">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-behance"></i></a></li>
-						</ul>
-						<img src="/images/chefs-02.jpg" alt="Chef #2">
-					</div>
-					<div class="down-content">
-						<h4>David Martin</h4>
-						<span>Cookie Chef</span>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="chef-item">
-					<div class="thumb">
-						<div class="overlay"></div>
-						<ul class="social-icons">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-google"></i></a></li>
-						</ul>
-						<img src="/images/chefs-03.jpg" alt="Chef #3">
-					</div>
-					<div class="down-content">
-						<h4>Peter Perkson</h4>
-						<span>Pancake Chef</span>
-					</div>
-				</div>
-			</div>
+			}
 		</div>
 	</div>
 </section>

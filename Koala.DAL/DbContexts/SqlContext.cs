@@ -30,5 +30,7 @@ namespace Koala.DAL.DbContexts
         public DbSet<Kitchen> Kitchen { get; set; }
         public DbSet<Slider> Slider { get; set; }
         public DbSet<Snack> Snack { get; set; }
+        public DbSet<People> People { get; set; }
+
     }
 }

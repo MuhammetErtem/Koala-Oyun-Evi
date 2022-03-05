@@ -18,4 +18,8 @@
     <ProjectReference Include="..\Koala.DAL\Koala.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\galleryp\" />
+  </ItemGroup>
+
 </Project>
