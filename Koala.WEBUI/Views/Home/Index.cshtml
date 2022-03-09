@@ -1,10 +1,10 @@
 ﻿@model IndexVm
 
 <div id="top">
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
 			<div class="col-lg-4">
-				<div class="left-content" style="background-image: url(/images/top-left-bg-1.jpg)">
+				<div class="left-content" style="background-image: url(/images/logo/bannerlogo10.jpg)">
 					<div class="inner-content">
 						<h4>Koala</h4>
 						<h4>Oyun Evi</h4>
@@ -30,7 +30,7 @@
 </div>
 <!-- ***** Main Banner Area End ***** -->
 <!-- ***** Menu Area Starts ***** -->
-<section class="section" id="menu">
+<section class="container" id="menu">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 offset-lg-4 text-center">
@@ -40,7 +40,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="menu-item-carousel">
+	<div class="container">
 		<div class="col-lg-12">
 			<div class="owl-menu-item owl-carousel">
 				@foreach (GalleryPicture g in Model.GalleryPicture)
@@ -58,7 +58,7 @@
 </section>
 <!-- ***** Menu Area Ends ***** -->
 <!-- ***** Chefs Area Starts ***** -->
-<section class="section" id="chefs">
+<section class="container" id="chefs">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 offset-lg-4 text-center">
@@ -75,8 +75,7 @@
 				<div class="chef-item" >
 					<div class="thumb">
 						<div class="overlay"></div>
-		
-						<img src="@p.Path" alt="@p.Title">
+						<img src="@p.Path" alt="@p.Title" height="400">
 					</div>
 					<div class="down-content">
 						<h4>@p.Name</h4>
@@ -126,7 +125,7 @@
 </section>
 <!-- ***** About Area Ends ***** -->
 <!-- ***** Reservation Us Area Starts ***** -->
-<section class="section" id="reservation">
+<section class="container" id="reservation">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 align-self-center">
