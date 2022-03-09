@@ -19,6 +19,6 @@ namespace Koala.DAL.Entities
         [Display(Name = "Kayıt Tarihi")]
         public DateTime DateOfEvent { get; set; }
         public bool Enabled { get; set; }
-
+        public ICollection<EventPicture> EventPictures { get; set; }
     }
 }

@@ -17,12 +17,14 @@ namespace Koala.DAL.DbContexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<GalleryPicture>().HasOne(ho => ho.Gallery).WithMany(wm => wm.GalleryPictures).OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<EventPicture>().HasOne(ho => ho.Event).WithMany(wm => wm.EventPictures).OnDelete(DeleteBehavior.Restrict);
         }
 
         public DbSet<Cold> Cold { get; set; }
         public DbSet<Desert> Desert { get; set; }
         public DbSet<Drink> Drink { get; set; }
         public DbSet<Event> Event { get; set; }
+        public DbSet<EventPicture> EventPicture { get; set; }
         public DbSet<Food> Food { get; set; }
         public DbSet<Gallery> Gallery { get; set; }
         public DbSet<GalleryPicture> GalleryPicture { get; set; }
@@ -31,6 +33,7 @@ namespace Koala.DAL.DbContexts
         public DbSet<Slider> Slider { get; set; }
         public DbSet<Snack> Snack { get; set; }
         public DbSet<People> People { get; set; }
+        public DbSet<Reservation> Reservation { get; set; }
 
     }
 }
